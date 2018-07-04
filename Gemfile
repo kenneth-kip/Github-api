@@ -22,6 +22,13 @@ gem 'rest-client'
 gem 'byebug'
 # Sourcing env variables
 gem 'dotenv-rails'
+# Frontend framework
+gem 'bootstrap', '~> 4.1.1'
+# Jquery to support bootstrap
+gem 'jquery-rails'
+# Social button
+gem 'bootstrap-social-rails'
+gem 'font-awesome-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

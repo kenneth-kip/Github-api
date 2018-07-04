@@ -1,12 +1,18 @@
-<div>
-  <p>
-    Well, hello there!
-  </p>
-  <p>
-    We're going to now talk to the GitHub API. Ready?
-    <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>">Click here</a> to begin!</a>
-  </p>
-  <p>
-    If that link doesn't work, remember to provide your own <a href="/apps/building-oauth-apps/authorizing-oauth-apps/">Client ID</a>!
-  </p>
+<div class="container position-absolute h-100 p-5" style="left: 10%">
+  <div>
+    <p>
+      Well, hello there!
+    </p>
+    <p class="text-justify">
+      We're going to now talk to the GitHub API.
+    </p>
+    <div>
+      <a class="btn btn-block btn-social btn-github text-light" href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>">
+        <span class="fa fa-github text-light"></span> Sign up with Github
+      </a>
+      <a class="btn btn-block btn-social btn-github text-light" href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>">
+        <span class="fa fa-github text-light"></span> Sign in with Github
+      </a>
+    </div>
+  </div>
 </div>
