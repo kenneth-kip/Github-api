@@ -1,6 +1,6 @@
 class AuthenticationController < ApplicationController
   skip_before_action :authenticate_user!
-   
+
   def index
     @client_id = ENV['CLIENT_ID']
   end
