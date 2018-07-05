@@ -3,7 +3,7 @@
     <img class="card-img-top" src="<%= @user.avatar_url %>" alt="Card image cap">
     <div class="card-body">
       <h4 class="card-title"><%= @user.name %></h4>
-      <p class="card-text"><%= @user.bio %></p>
+      <p class="card-text"><b>Bio: </b><%= @user.bio %></p>
       <p class="card-text">
         <b>Email:</b>
         <% if  @user.email %>
@@ -12,8 +12,8 @@
            Not Available
         <% end %>
       </p>
-      <p class="card-text"><%= @user.location %></p>
-      <a href="<%= @user.html_url %>" class="card-link">Github Profile</a>
+      <p class="card-text"><b>Location:</b> <%= @user.location %></p>
+      <p><b>Github Profile: </b><%= link_to @user['name'], @user['html_url'] %><p>
     </div>
   </div>
   <div class="d-flex flex-column justify-content-between w-50">
@@ -26,23 +26,15 @@
           <div class="col-4">
             <div class="card-body">
               <h2 class="card-title">
-                <% if @user.total_private_repos %>
-                  <%= @user.total_private_repos %>
-                <% else %>
-                  0
-                <% end %>
+                <%= @user.total_private_repos || 0 %>
               </h2>
               <p class="card-text">Number of private repos</p>
             </div>
           </div>
           <div class="col-4">
             <div class="card-body">
-              <h2 class="card-title">
-                <% if @user.total_public_repos %>
-                  <%= @user.total_public_repos %>
-                <% else %>
-                  0
-                <% end %>
+              <h2 class="card-title">  
+                <%= @user.total_public_repos || 0 %>
               </h2>
               <p class="card-text">Number of public repos </p>
             </div>
@@ -50,11 +42,7 @@
           <div class="col-4">
             <div class="card-body">
               <h2 class="card-title">
-                <% if @user.collaborators %>
-                  <%= @user.collaborator %>
-                <% else %>
-                  0
-                <% end %>
+                <%= @user.collaborators || 0 %>
               </h2>
               <p class="card-text">Collaborations</p>
             </div>
