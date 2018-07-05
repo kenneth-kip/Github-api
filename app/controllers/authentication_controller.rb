@@ -2,6 +2,7 @@ class AuthenticationController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
+    return redirect_to '/' if session[:user_id]
     @client_id = ENV['CLIENT_ID']
   end
 
