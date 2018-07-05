@@ -18,8 +18,12 @@ class AuthenticationController < ApplicationController
   end
 
   def destroy
-    reset_session
-    redirect_to '/login'
+    clear_sessions
+  end
+
+  def deactivate
+    User.find(session[:user_id]).destroy
+    clear_sessions
   end
 
   private
@@ -38,5 +42,10 @@ class AuthenticationController < ApplicationController
       Authorization: "token #{access_token}"
     )
     JSON.parse(result)
+  end
+
+  def clear_sessions
+    reset_session
+    redirect_to '/login'
   end
 end

@@ -14,6 +14,7 @@
       </p>
       <p class="card-text"><b>Location:</b> <%= @user.location %></p>
       <p><b>Github Profile: </b><%= link_to @user['name'], @user['html_url'] %><p>
+      <%= button_to "Delete Account",'/deactivate', method: :delete, class: "btn btn-outline-danger my-2 my-sm-0" %>
     </div>
   </div>
   <div class="d-flex flex-column justify-content-between w-50">
