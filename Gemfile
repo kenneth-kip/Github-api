@@ -17,16 +17,16 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # http client
-gem 'rest-client'
+gem 'rest-client', '2.0.2'
 # Frontend framework
 gem 'bootstrap', '~> 4.1.1'
 # Jquery to support bootstrap
-gem 'jquery-rails'
+gem 'jquery-rails', '4.3.3'
 # Social button
-gem 'bootstrap-social-rails'
-gem 'font-awesome-rails'
+gem 'bootstrap-social-rails',
+gem 'font-awesome-rails', '~> 4.7.0.4'
 # Adds autocomplete
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '4.12.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
