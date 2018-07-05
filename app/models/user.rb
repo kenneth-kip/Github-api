@@ -10,7 +10,8 @@ class User < ApplicationRecord
       followers: auth['followers'],
       total_private_repos: auth['total_private_repos'],
       total_public_repos: auth['public_repos'],
-      location: auth['location']
+      location: auth['location'],
+      html_url: auth['html_url']
     )
     user
   end

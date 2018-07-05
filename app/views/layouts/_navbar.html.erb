@@ -3,10 +3,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand mr-auto mt-2 mt-lg-0" href="#">Profile Viewer</a>
-    <form class="form-inline mr-auto my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search Users" aria-label="Search">
+    <a class="navbar-brand mr-auto mt-2 mt-lg-0" href="/">Profile Viewer</a>
+    <form class="form-inline mr-auto my-2 my-lg-0 search-user">
+      <input class="form-control mr-sm-2 typeahead" type="search" placeholder="Search Users" aria-label="Search">
     </form>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+    <%= button_to "Sign Out", signout_path, method: :delete, class: "btn btn-outline-success my-2 my-sm-0" %>
   </div>
 </nav>

@@ -1,0 +1,39 @@
+<div class="container justify-content-center align-items-start d-flex p-5">
+  <div class="card mr-5" style="width: 23rem;">
+    <%= image_tag(@user['avatar_url'], class: "card-img-top", alt: "Card image cap") %>
+    <div class="card-body">
+      <h4 class="card-title"><b>Name:</b> <%= @user['name'] %></h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <p class="card-text">
+            <b>Email:</b>
+            <% if  @user['email'] %>
+              <%= @user['email'] %>
+            <% else %>
+              Not Available
+            <% end %>
+          </p>
+        </li>
+        <li class="list-group-item">
+          <p class="card-text">
+            <b>Bio:</b>
+            <% if  @user['bio'] %>
+              <%= @user['bio'] %>
+            <% else %>
+              Not Available
+            <% end %>
+          </p>
+        </li>
+        <li class="list-group-item">
+          <p class="card-text"><b>Location:</b> <%= @user['location'] %></p>
+        </li>
+        <li class="list-group-item">
+          <p><b>Github Profile: </b><%= link_to "Profile", @user['html_url'] %><p>
+        </li>
+        <li class="list-group-item">
+          Vestibulum at eros
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

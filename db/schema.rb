@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_07_04_180219) do
     t.integer "total_private_repos"
     t.integer "collaborators"
     t.string "location"
+    t.string "html_url"
   end
 
 end

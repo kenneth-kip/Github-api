@@ -18,10 +18,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # http client
 gem 'rest-client'
-# debugging
-gem 'byebug'
-# Sourcing env variables
-gem 'dotenv-rails'
 # Frontend framework
 gem 'bootstrap', '~> 4.1.1'
 # Jquery to support bootstrap
@@ -29,6 +25,8 @@ gem 'jquery-rails'
 # Social button
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
+# Adds autocomplete
+gem 'jquery-ui-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -64,6 +62,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Sourcing env variables
+  gem 'dotenv-rails'
 end
 
 group :test do

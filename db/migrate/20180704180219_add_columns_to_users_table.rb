@@ -10,5 +10,6 @@ class AddColumnsToUsersTable < ActiveRecord::Migration[5.2]
     add_column :users, :total_private_repos, :integer
     add_column :users, :collaborators, :integer
     add_column :users, :location, :string
+    add_column :users, :html_url, :string
   end
 end
