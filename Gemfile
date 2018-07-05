@@ -23,10 +23,10 @@ gem 'bootstrap', '~> 4.1.1'
 # Jquery to support bootstrap
 gem 'jquery-rails', '4.3.3'
 # Social button
-gem 'bootstrap-social-rails',
+gem 'bootstrap-social-rails'
 gem 'font-awesome-rails', '~> 4.7.0.4'
 # Adds autocomplete
-gem 'jquery-ui-rails', '4.12.0'
+gem 'jquery-ui-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

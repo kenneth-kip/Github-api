@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center align-items-between p-5" style="left: 10%">
-  <div class="h-25 d-flex flex-column justify-content-around">
+  <div class="h-25 d-flex flex-column justify-content-around login">
     <h2 class="text-center">
       Jambo!
     </h2>
@@ -7,11 +7,8 @@
       We're going to now talk to the GitHub API.
     </h2>
     <div class="h-30 d-flex flex-column justify-content-around">
-      <a class="btn btn-block btn-social btn-github text-light" href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>">
-        <span class="fa fa-github text-light"></span> Register with Github
-      </a>
-      <a class="btn btn-block btn-social btn-github text-light" href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>">
-        <span class="fa fa-github text-light"></span> Login with Github
+      <a class="btn btn-block btn-social btn-github text-light text-center" href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= @client_id %>">
+        <span class="fa fa-github text-light"></span>Login with your Github Account
       </a>
     </div>
   </div>

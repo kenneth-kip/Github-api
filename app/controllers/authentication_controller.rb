@@ -37,12 +37,9 @@ class AuthenticationController < ApplicationController
 
   def user_info
     access_token = session[:access_token]
-    result = RestClient.get(
-      'https://api.github.com/user',
-      accept: :json,
-      Authorization: "token #{access_token}"
-    )
-    JSON.parse(result)
+    url = 'https://api.github.com/user'
+    header = { Authorization: "token #{access_token}" }
+    fetch_github_info(url, header)
   end
 
   def clear_sessions
