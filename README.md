@@ -1,24 +1,22 @@
-# README
+# GITHUB PROFILE VIEWER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app that consumes the github API. It fetches a list of users and their profile.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+- Make sure you have Ruby 2.4.1 and Rails installed on your machine
 
-* System dependencies
+- Create an Oauth app on github. Get the cient id and secret.
 
-* Configuration
+- Be careful store the client id and secret. Store them as env variables
 
-* Database creation
+- Create and run migrations. `rake db:create` and `rake db:migrate`
 
-* Database initialization
+- After this, you are good to go, Just do `rails s` to start the app
 
-* How to run the test suite
+## Deployment
 
-* Services (job queues, cache servers, search engines, etc.)
+- Hosted on heroku `http;//github-api-kenneth@herokuapp.com`
 
-* Deployment instructions
 
-* ...
+
