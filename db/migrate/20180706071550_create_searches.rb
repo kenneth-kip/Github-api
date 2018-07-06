@@ -3,6 +3,7 @@ class CreateSearches < ActiveRecord::Migration[5.2]
     create_table :searches do |t|
       t.string :name
       t.references :user
+      t.timestamps
     end
   end
 end

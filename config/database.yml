@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['GITHUB_DATABASE_NAME'] %>
+  database: github_production
   username: <%= ENV['GITHUB_DATABASE_USER'] %>
   password: <%= ENV['GITHUB_DATABASE_PASSWORD'] %>

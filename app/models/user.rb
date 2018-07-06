@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :searches, dependent: :destroy
+
   def self.from_github_auth(auth)
     user = where(uid: auth['id']).first_or_create
     user.update(

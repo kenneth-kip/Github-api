@@ -24,7 +24,7 @@
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-sm-4 col-lg-4">
             <div class="card-body">
               <h2 class="card-title">
                 <%= @user.total_private_repos || 0 %>
@@ -32,7 +32,7 @@
               <p class="card-text">Number of private repos</p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-4 col-lg-4">
             <div class="card-body">
               <h2 class="card-title">  
                 <%= @user.total_public_repos || 0 %>
@@ -40,7 +40,7 @@
               <p class="card-text">Number of public repos </p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-4 col-lg-4">
             <div class="card-body">
               <h2 class="card-title">
                 <%= @user.collaborators || 0 %>
@@ -57,13 +57,13 @@
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-sm-4 col-lg-4">
             <div class="card-body">
               <h2 class="card-title"><%= @user.following %></h2>
               <p class="card-text">Following</p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-4 col-lg-4">
             <div class="card-body">
               <h2 class="card-title"><%= @user.followers %></h2>
               <p class="card-text">Followers</p>
@@ -75,20 +75,19 @@
     <div class="card" style="width: 20rem;">
       <div class="card-body">
         <h4 class="card-title">Most Recent Searches</h4>
-        <div class="card-body">
+        <div>
           <ul class="list-group">
-            <li class="list-group-item">
-              <p><b>Follower</b><p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Following</b><p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Follower</b><p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Following</b><p>
-            </li>
+            <% if @searches.empty? %>
+              <li class="list-group-item">
+                <p><b>None so far. Lets Search</b></p>
+              </li> 
+            <% else %>
+              <% @searches.each do |search| %>
+                <li class="list-group-item">
+                  <p><b><%= link_to search.name, 'dashboard/' + search.name %></b><p>
+                </li>
+              <% end %>
+            <% end %>
           </ul>
         </div>
       </div>

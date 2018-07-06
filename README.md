@@ -18,5 +18,9 @@ This is an app that consumes the github API. It fetches a list of users and thei
 
 - Hosted on heroku `http;//github-api-kenneth@herokuapp.com`
 
+## Test - coming soon
+
+- We'll using Webmock for testing so as not to ping external services when running tests
+
 
 
