@@ -20,7 +20,9 @@ This is an app that consumes the github API. It fetches a list of users and thei
 
 ## Test - coming soon
 
-- We'll using Webmock for testing so as not to ping external services when running tests
+- The github api is mocked using webmock and sinatra
+
+- Run `rspec -f doc` to run the test
 
 
 

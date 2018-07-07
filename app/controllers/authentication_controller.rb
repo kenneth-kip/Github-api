@@ -23,7 +23,7 @@ class AuthenticationController < ApplicationController
   end
 
   def deactivate
-    User.find(session[:user_id]).destroy
+    current_user.destroy
     clear_sessions
   end
 
