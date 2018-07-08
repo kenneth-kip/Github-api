@@ -19,8 +19,12 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
 ]
-SimpleCov.start
-
+SimpleCov.start do
+  add_filter "/helpers/"
+  add_filter "/jobs/"
+  add_filter "/mailers/"
+  add_filter "/channels/"
+end
 # loads support directory
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 # Add additional requires below this line. Rails is not loaded until this point!
