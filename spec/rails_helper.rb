@@ -5,7 +5,21 @@ require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+
+# adds webmock 
 require 'webmock/rspec'
+
+# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'coveralls'
+require 'simplecov'
+
+Coveralls.wear!('rails')
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+SimpleCov.start
 
 # loads support directory
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }

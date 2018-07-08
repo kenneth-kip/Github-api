@@ -78,6 +78,8 @@ group :test do
   gem 'webmock'
   gem 'sinatra'
   gem 'rails-controller-testing'
+  gem 'simplecov'
+  gem 'coveralls'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
