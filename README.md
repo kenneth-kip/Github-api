@@ -1,3 +1,7 @@
+[![Coverage Status](https://coveralls.io/repos/github/kenneth-kip/Github-api/badge.svg)](https://coveralls.io/github/kenneth-kip/Github-api)
+
+[![Build Status](https://travis-ci.org/kenneth-kip/Github-api.svg?branch=master)](https://travis-ci.org/kenneth-kip/Github-api)
+
 # GITHUB PROFILE VIEWER
 
 This is an app that consumes the github API. It fetches a list of users and their profile.
@@ -18,7 +22,7 @@ This is an app that consumes the github API. It fetches a list of users and thei
 
 - Hosted on heroku `http;//github-api-kenneth@herokuapp.com`
 
-## Test - coming soon
+## Tests
 
 - The github api is mocked using webmock and sinatra
 
