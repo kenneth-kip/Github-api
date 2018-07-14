@@ -12,7 +12,7 @@
            Not Available
         <% end %>
       </p>
-      <p class="card-text"><b>Location:</b> <%= @user.location %></p>
+      <p class="card-text" id="location"><b>Location:</b> <%= @user.location %></p>
       <p><b>Github Profile: </b><%= link_to @user['name'], @user['html_url'] %><p>
       <%= button_to "Delete Account",'/deactivate', method: :delete, class: "btn btn-outline-danger my-2 my-sm-0" %>
     </div>
@@ -72,25 +72,40 @@
         </div>
       </div>
     </div>
-    <div class="card" style="width: 20rem;">
-      <div class="card-body">
-        <h4 class="card-title">Most Recent Searches</h4>
-        <div>
-          <ul class="list-group">
-            <% if @searches.empty? %>
-              <li class="list-group-item">
-                <p><b>None so far. Lets Search</b></p>
-              </li> 
-            <% else %>
-              <% @searches.each do |search| %>
-                <li class="list-group-item">
-                  <p><b><%= link_to search.name, 'dashboard/' + search.name %></b><p>
-                </li>
-              <% end %>
-            <% end %>
-          </ul>
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-6">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title">Top profiles - <%= @user.location %></h4>
+            <div>
+              <ul class="list-group popular-profiles">
+                
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="col-md-6 col-lg-6 col-sm-6">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title">Most Recent Searches</h4>
+            <div>
+              <ul class="list-group">
+                <% if @searches.empty? %>
+                  <li class="list-group-item">
+                    <p><b>None so far. Lets Search</b></p>
+                  </li> 
+                <% else %>
+                  <% @searches.each do |search| %>
+                    <li class="list-group-item">
+                      <b><%= link_to search.name, 'dashboard/' + search.name %></b>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </div>

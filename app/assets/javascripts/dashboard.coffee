@@ -1,6 +1,7 @@
 $(document).on 'turbolinks:load', () ->
+  base_url = window.location.origin
+
   getData = (request, response) ->
-    base_url = window.location.origin
     $.getJSON base_url + '/autocomplete/?q=' + request.term, (data) ->
       response data
       return
@@ -17,3 +18,15 @@ $(document).on 'turbolinks:load', () ->
     messages:
       noResults: ''
       results: ->
+  
+  location = $('#location').html().replace('<b>Location:</b> ', '')
+  
+  if window.location.href == "http://localhost:3000/"
+    location = $('#location').html().replace('<b>Location:</b> ', '')
+    $.getJSON "https://api.github.com/search/users?q=+followers:%3E200+location:%3D" + location + "&per_page=5", (result) ->
+      $.each result.items, (i, field) ->
+        profile_url = '<a href="dashboard/' + field.login + '">' + field.login + '</a>'
+        console.log(profile_url)
+        $('.popular-profiles').append '<li class="list-group-item">' + (i + 1) + '. ' + profile_url + '</li>'
+        return
+      return
