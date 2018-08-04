@@ -1,6 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/kenneth-kip/Github-api/badge.svg)](https://coveralls.io/github/kenneth-kip/Github-api)
-
-[![Build Status](https://travis-ci.org/kenneth-kip/Github-api.svg?branch=master)](https://travis-ci.org/kenneth-kip/Github-api)
+[![Coverage Status](https://coveralls.io/repos/github/kenneth-kip/Github-api/badge.svg)](https://coveralls.io/github/kenneth-kip/Github-api) [![Build Status](https://travis-ci.org/kenneth-kip/Github-api.svg?branch=master)](https://travis-ci.org/kenneth-kip/Github-api)
 
 # GITHUB PROFILE VIEWER
 
